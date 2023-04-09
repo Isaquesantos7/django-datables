@@ -64,7 +64,7 @@
             dom: 'lBfrtip',
             buttons: [
                 //Butão para copiar dados da tabela
-                {
+                { //COPY
                     extend: 'copy',
                     text: '<i class="fas fa-clone"></i>',
                     className:  'btn btn-secondary',
@@ -72,9 +72,22 @@
 
                     //escolher a coluna que voce quer copiar
                     // exportOptions: {
-                    //     column: [0 ,1 ,2, 3, 4, 5],
+                    //     columns: [0 ,1 ,2],
                     // }
-                }
+                },
+
+                //Butão para exporta dados em XLS
+                {
+                    extend: 'excel',
+                    text: '<i class="fas fa-file-excel"></i>',
+                    className: 'btn btn-secondary',
+                    titleAttr: 'Excel',
+
+                    //Escolher as colunas para exportar
+                    // exportOptions: {
+                    //     columns: [0,1,2,3,4,5]
+                    // }
+                },
             ]
         });
 

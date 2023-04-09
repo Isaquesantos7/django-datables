@@ -77,7 +77,7 @@
                 },
 
                 //Butão para exporta dados em XLS
-                {
+                { // Excel
                     extend: 'excel',
                     text: '<i class="fas fa-file-excel"></i>',
                     className: 'btn btn-secondary',
@@ -85,9 +85,30 @@
 
                     //Escolher as colunas para exportar
                     // exportOptions: {
-                    //     columns: [0,1,2,3,4,5]
+                    //     columns: [0,1,2,3,4,]
                     // }
-                },
+                },  
+
+                //Botão para imprimir
+                { //Imprimir
+                    extend: 'print',
+                    text: '<i class="fas fa-print"></i>',
+                    className: 'btn btn-secondary',
+                    titleAttr: 'Print',
+                    
+                    //Escolher colunas para exportar
+                    exportOptions: {
+                        columns: [0,1,2,3,4]
+                    },
+                    
+                    //Customizando Font-size
+                    customsize: function() {
+                        $(window.document.body.css('font-size', '10pt'));
+                        $(window.document.body).find('table')
+                            .addClass('compact')
+                            .css('font-size', 'inherit');
+                    }
+                }
             ]
         });
 

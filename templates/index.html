@@ -56,6 +56,12 @@
             //     "orderable": false,
             // }]
         });
+
+        //Função que pega o valor digitado em um text input e adiciona no search input do datatables
+        var newSearch = $('#example').DataTable();
+        $('#search').keyup(function() {
+            newSearch.search($(this).val()).draw();
+        });
     </script>
 </body>
 </html>

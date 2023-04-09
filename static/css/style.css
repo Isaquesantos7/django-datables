@@ -35,23 +35,31 @@ body {
     gap: 0.3rem;
 }
 
-.header-nav-title > i, h5 {
+.header-nav-title > i {
+    color: var(--primary-bg-button);
+    font-weight: 700;
+    align-self:baseline;
+}
+
+.header-nav-title > h5 {
     color: var(--primary-font-color);
     font-weight: 700;
     align-self:baseline;
 }
 
+.header-search {
+    display: flex;
+    flex-direction: row;
+}
 .header-search input {
     border: none;
-    border-radius: 5px;
     padding: 5px;
 }
 
 .header-search a {
     color: var(--primary-bg-color-header);
-    background-color: var(--primary-bg-color);
-    border-radius: 5px;
-    padding: 5px;
+    background-color: #89848d;
+    padding: 6px;
 }
 
 .header-search a:hover {
@@ -61,6 +69,10 @@ body {
 
 .main-container {
     min-height: 100vh;
+}
+
+.dataTables_filter {
+    display: none;
 }
 
 .tabela-employee {

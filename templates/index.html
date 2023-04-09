@@ -37,6 +37,10 @@
     <!--Datatables JS-->
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/v/bs5/jq-3.6.0/jszip-2.5.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/b-print-2.3.6/datatables.min.js"></script>
+
 
     <!--Datatables scrips-->
     <script>
@@ -55,6 +59,23 @@
             //    "targets": [0 ,4],
             //     "orderable": false,
             // }]
+
+            //BUTTONS
+            dom: 'lBfrtip',
+            buttons: [
+                //Butão para copiar dados da tabela
+                {
+                    extend: 'copy',
+                    text: '<i class="fas fa-clone"></i>',
+                    className:  'btn btn-secondary',
+                    titleAttr: 'Copy',
+
+                    //escolher a coluna que voce quer copiar
+                    // exportOptions: {
+                    //     column: [0 ,1 ,2, 3, 4, 5],
+                    // }
+                }
+            ]
         });
 
         //Função que pega o valor digitado em um text input e adiciona no search input do datatables

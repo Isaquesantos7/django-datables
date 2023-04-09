@@ -41,6 +41,12 @@
             searching: true, //adiciona campo de pesquisa
             bInfo: true, //adiciona o info sobre os registros da tabelas
             bSort: true, //adiciona ordenacao
+            
+            //Desativando filtro de ordenação em uma coluna especifica
+            "columnDefs":[{
+                "targets": 4,
+                "orderable": false,
+            }]
         });
     </script>
 </body>

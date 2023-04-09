@@ -1,0 +1,54 @@
+
+:root {
+    --primary-bg-color: #FDF4F5;
+    --primary-font-color: #FFF;
+    --primary-font-family: 'Open sans';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font-family);
+}
+
+body {
+    background-color: var(--primary-bg-color);
+    margin-top: 3rem;
+}
+
+.container {
+    max-width: 80%;
+}
+
+.tabela-employee {
+    max-width: 80%;
+    height: 100%;
+    margin: auto;
+}
+
+.tabela-new-employee {
+    margin-bottom: 0.7rem;
+}
+
+.tabela-new-employee button {
+    background-color: #7149C6;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.tabela-new-employee button > a {
+    color: var(--primary-font-color);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.tabela-employee button > a:hover {
+    font-weight: 600;
+}
+
+.tabela-employee button > a > i:hover {
+    font-weight: 600;
+}

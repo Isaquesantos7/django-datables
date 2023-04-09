@@ -1,0 +1,33 @@
+{% extends "../index.html" %}
+
+{% block content %}
+    <div class="container">
+        {% include '../messages/messages.html' %}
+        
+        <div class="tabela-new-employee">
+            <button><a href="{% url 'index' %}"><i class="fa-solid fa-arrow-rotate-left"></i> Return</a></button>
+        </div>
+        
+        <form action="/addEmployee/" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="name-employee" class="form-label">Name</label>
+                {{ form.name }}
+            </div>
+            <div class="mb-3">
+                <label for="email-employee" class="form-label">Email</label>
+                {{ form.email }}
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="job-employee" class="form-label">Job</label>
+                {{ form.job }}
+            </div>
+            <div class="mb-3 form-check">
+                <label for="job-employee" class="form-label">Active</label>
+                {{ form.active }}
+            </div>
+            <input type="submit" class="btn btn-primary" value="Save">
+        </form>
+    </div>
+{% endblock %}

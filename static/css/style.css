@@ -71,9 +71,17 @@ body {
     min-height: 100vh;
 }
 
+/*datatable search*/
 .dataTables_filter {
     display: none;
 }
+/*---------------------------------------------------------*/
+
+/*datatables quantidade de dados na tabela*/
+.dataTables_length {
+    margin-bottom: 0.4rem;
+}
+/*---------------------------------------------------------*/
 
 .tabela-employee {
     max-width: 90%;
@@ -107,7 +115,7 @@ body {
     font-weight: 600;
 }
 
-/*Custom buttons*/
+/* Datatables Custom buttons*/
 .paginate_button  > a{
     border: none;
     border-radius: 3px;
@@ -124,6 +132,7 @@ body {
 .paginate_button.active > a:hover {
     font-weight: bold !important;
 }
+/*---------------------------------------------------------*/
 
 .footer {
     position:absolute;
@@ -167,5 +176,10 @@ body {
         height: 100%;
         margin: auto;
         overflow: hidden;
+    }
+
+    /*Datatables quatidade de rows*/
+    .dataTables_length {
+        float: right;
     }
 }

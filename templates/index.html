@@ -13,12 +13,19 @@
     {% include './partes/head.html' %}
 </head>
 <body>
+    <header class="header">
+        {% include './header/header.html' %}
+    </header>
 
-    <div class="container">
-        {% block content %}{% endblock %}
-    </div>
+    <main class="main-container">
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
 
-    {% include './partes/footer.html' %}
+    <footer>
+        {% include './partes/footer.html' %}
+    </footer>
 
     <!--Bootstrap5 scripts-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
@@ -36,7 +43,7 @@
         $('#example').DataTable({
             paging: true, //adiciona paginacao
             pageLength: 6, //quantidade de linhas na pagina
-            lenghtChange: true,
+            lenghtChange: false,
             autoWidth: true, //adiciona largura da coluna automatica
             searching: true, //adiciona campo de pesquisa
             bInfo: true, //adiciona o info sobre os registros da tabelas

@@ -1,30 +1,72 @@
 
 :root {
     --primary-bg-color: #FDF4F5;
+    --primary-bg-color-header: #393646;
     --primary-font-color: #FFF;
     --primary-font-family: 'Open sans';
+    --primary-bg-button: #20c997;
 }
 
-*{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: var(--primary-font-family);
-}
-
-body {
     background-color: var(--primary-bg-color);
-    margin-top: 3rem;
 }
 
-.container {
-    max-width: 80%;
+/*Custom header*/
+.header {
+    background-color: var(--primary-bg-color-header);
+    margin-bottom: 3rem;
+    padding: 20px;
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-nav-title {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+}
+
+.header-nav-title > i, h5 {
+    color: var(--primary-font-color);
+    font-weight: 700;
+    align-self:baseline;
+}
+
+.header-search input {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.header-search a {
+    color: var(--primary-bg-color-header);
+    background-color: var(--primary-bg-color);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.header-search a:hover {
+    background-color: var(--primary-bg-button);
+    color: var(--primary-font-color);
+}
+
+.main-container {
+    min-height: 100vh;
 }
 
 .tabela-employee {
-    max-width: 80%;
-    height: 100%;
+    max-width: 90%;
     margin: auto;
+    overflow: auto;
 }
 
 .tabela-new-employee {
@@ -51,4 +93,67 @@ body {
 
 .tabela-employee button > a > i:hover {
     font-weight: 600;
+}
+
+/*Custom buttons*/
+.paginate_button  > a{
+    border: none;
+    border-radius: 3px;
+}
+.paginate_button > a:hover {
+    color: var(--primary-font-color);
+    background-color: var(--primary-bg-button);
+}
+
+.paginate_button.active > a {
+    background-color: var(--primary-bg-button) !important;
+}
+
+.paginate_button.active > a:hover {
+    font-weight: bold !important;
+}
+
+.footer {
+    position:absolute;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.main-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-bottom: 0;
+    left: 0;
+    background-color: var(--primary-bg-color-header);
+    padding: 15px;
+    width: 100%;
+}
+
+.main-footer p {
+    color: var(--primary-font-color);
+    font-style: italic;
+    text-align: center;
+    margin: auto;
+}
+
+@media (min-width: 700px) {
+    .container {
+        max-width: 80%;
+    }
+    
+    .header-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .tabela-employee {
+        max-width: 80%;
+        height: 100%;
+        margin: auto;
+        overflow: hidden;
+    }
 }

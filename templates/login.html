@@ -1,0 +1,51 @@
+{% extends 'index.html' %}
+
+{% block nav %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="main-login">
+        <div class="main-login-form">
+            <h1>LOGIN</h1>
+            <form method="post" action="/login_user" autocomplete="off">
+                {% csrf_token %}
+                <div class="username">
+                    <label for="username"><i class="fa-solid fa-user"></i> Username:</label>
+                    <input class="form-control" type="text" id="username" name="username" required placeholder="type username here.">
+                </div>
+
+                <div class="password">
+                    <label for="password"><i class="fa-solid fa-lock"></i> Password:</label>
+                    <input class="form-control" type="password" name="password" id="password" required placeholder="type password here.">
+                </div>
+            
+                <div class="show-password">
+                    <label>Show password?</label>
+                    <input type="checkbox" id="checkbox">
+                </div>
+                
+                <input class="btn btn-sm btn-secondary" type="submit" value="Enter">
+            </form>
+
+            <span class="main-login-message">
+                {% include './messages/messages.html' %}
+            </span>
+        </div>
+    </div>
+
+    <script>
+        let check = document.getElementById('checkbox');
+        let password = document.getElementById('password');
+
+        check.addEventListener('click', () => {
+            if (password.type == 'password') {
+                password.type = 'text';
+            } else {
+                password.type = 'password';
+            }
+        });
+    </script>
+{% endblock %}
+
+{% block footer %} {% endblock %}

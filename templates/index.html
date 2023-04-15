@@ -8,14 +8,17 @@
 
     <link rel="shortcut icon" href="{% static './img/favicon.ico' %}" type="image/x-icon">
 
-    <title>Datatables</title>
+    {% block title %}<title>Datatables</title>{% endblock %}
 
     {% include './partes/head.html' %}
 </head>
 <body>
-    <header class="header">
-        {% include './header/header.html' %}
-    </header>
+    {% block nav %}
+        <header class="header">
+            {% include './header/header.html' %}
+        </header>
+        {% include "./messages/messages.html" %}
+    {% endblock %}
 
     <main class="main-container">
         <div class="container">
@@ -23,9 +26,11 @@
         </div>
     </main>
 
-    <footer>
-        {% include './partes/footer.html' %}
-    </footer>
+    {% block footer %}
+        <footer>
+            {% include './partes/footer.html' %}
+        </footer> 
+    {% endblock %}
 
     <!--Bootstrap5 scripts-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
@@ -45,13 +50,23 @@
     <!--Datatables scrips-->
     <script>
         $('#example').DataTable({
+            // "ajax": "/json",
+            // "columns": [
+            //     {"data": "id"},
+            //     {"data": "name"},
+            //     {"data": "email"},
+            //     {"data": "job"},
+            //     {"data": "active"},
+            // ],
             paging: true, //adiciona paginacao
-            pageLength: 6, //quantidade de linhas na pagina
+            pageLength: 10, //quantidade de linhas na pagina
             lenghtChange: false,
             autoWidth: true, //adiciona largura da coluna automatica
             searching: true, //adiciona campo de pesquisa
             bInfo: true, //adiciona o info sobre os registros da tabelas
             bSort: true, //adiciona ordenacao
+            scrollX: false, //adciona scroll lateral
+            scrollY: true, //adciona scroll vertical
             
             //Desativando filtro de ordenação em uma coluna especifica
             // "columnDefs":[{

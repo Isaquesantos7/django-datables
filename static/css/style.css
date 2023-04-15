@@ -50,6 +50,7 @@ body {
 .header-search {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 .header-search input {
     border: none;
@@ -65,6 +66,15 @@ body {
 .header-search a:hover {
     background-color: var(--primary-bg-button);
     color: var(--primary-font-color);
+}
+
+.logout {
+    align-content: flex-end;
+    margin-left: 15px;
+}
+
+.logout a:hover{
+    background-color: red;
 }
 
 .main-container {

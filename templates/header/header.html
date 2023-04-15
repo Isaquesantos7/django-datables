@@ -1,10 +1,16 @@
-<nav class="header-nav">
-    <div class="header-nav-title">
-        <i class="fa-solid fa-people-group"></i>
-        <h5>List employees</h5>
-    </div>
-    <div class="header-search">
-        <input type="text" id="search" placeholder="Search here...">
-        <a href="{% url 'index' %}"><i class="fa-solid fa-repeat"></i></a>
-    </div>
-</nav>
+{% block nav %} 
+    <nav class="header-nav">
+        <div class="header-nav-title">
+            <i class="fa-solid fa-people-group"></i>
+            <h5>List employees</h5>
+        </div>
+        <div class="header-search">
+            <input type="text" id="search" placeholder="Search here...">
+            <a href="{% url 'index' %}"><i class="fa-solid fa-repeat"></i></a>
+            <span class="logout">
+                <a href="{% url 'logout_user' %}"><i class="fa-solid fa-right-from-bracket"></i></a>
+            </span>
+        </div>
+
+    </nav>
+{% endblock %}

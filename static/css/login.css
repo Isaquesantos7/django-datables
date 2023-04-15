@@ -1,0 +1,37 @@
+.main-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main-login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.main-login-form h1 {
+    align-self: center;
+}
+
+.username {
+    margin-bottom: 10px;
+}
+
+.password {
+    margin-bottom: 10px;
+}
+
+.show-password {
+    margin-bottom: 10px;
+}
+
+.main-login-message {
+    text-align: center;
+    margin-top: 15px;
+}

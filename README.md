@@ -8,4 +8,4 @@
 * Jquery
 * Python
 ## Objetivo do projeto
-* Praticar as diferentes formas de apresentar formularios ultilizando do DataTables no Django.
+* Praticar as diferentes formas de apresentar relatórios ultilizando do DataTables no Django.
